@@ -19,3 +19,9 @@ go mod tidy
 go build -o cert-manager main.go
 ```
 
+Nginx存在反向代理时
+```
+location /.well-known/ {
+    root /www/wwwroot/mypass.xxxx.cn;
+}
+```
