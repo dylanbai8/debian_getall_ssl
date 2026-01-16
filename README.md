@@ -17,6 +17,9 @@ go version
 go mod init cert-manager
 go mod tidy
 go build -o cert-manager main.go
+
+编译纯静态版本
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o cert-manager
 ```
 
 Nginx存在反向代理时
