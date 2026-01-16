@@ -81,8 +81,8 @@ RestartSec=5
 KillSignal=SIGTERM
 TimeoutStopSec=30
 LimitNOFILE=1048576
-StandardOutput=journal
-StandardError=journal
+StandardOutput=null
+StandardError=null
 
 [Install]
 WantedBy=multi-user.target
@@ -105,7 +105,13 @@ echo "完成！"
 echo "查看日志: journalctl -u $SERVICE_NAME -f"
 ```
 
-
+.
+```
+systemctl restart cert-manager
+systemctl stop cert-manager
+systemctl status cert-manager
+journalctl -u cert-manager -f
+```
 
 
 
