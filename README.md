@@ -25,3 +25,23 @@ location /.well-known/ {
     root /www/wwwroot/mypass.xxxx.cn;
 }
 ```
+
+
+手动安装acme.sh
+```
+pkill -f acme.sh
+rm -rf /root/.acme.sh
+
+curl https://get.acme.sh | sh
+source ~/.bashrc
+
+~/.acme.sh/acme.sh --version
+```
+
+
+
+
+
+
+
+
